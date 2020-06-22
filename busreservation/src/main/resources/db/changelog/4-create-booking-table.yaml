@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-booking-table
+      author: prabhdeep
+      changes:
+        - createTable:
+            tableName: booking
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: booking_number
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: trip_id
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: customer_name
+                  type: VARCHAR
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total_price
+                  type: numeric
+                  constraints:
+                    nullable: false
+

@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-bus-trip-table
+      author: prabhdeep
+      changes:
+        - createTable:
+            tableName: bus_route
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: bus_id
+                  type: bigserial
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: source
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: destination
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: arrival_time
+                  type: TIME
+                  constraints:
+                    nullable: false
+              - column:
+                  name: departure_time
+                  type: TIME
+                  constraints:
+                    nullable: false
+

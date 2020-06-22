@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-booking-details-table
+      author: prabhdeep
+      changes:
+        - createTable:
+            tableName: booking_details
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: trip_id
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: seat_no
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: booking_id
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+

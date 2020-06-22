@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - include:
+      file: classpath:db/changelog/1-create-bus-table.yaml
+  - include:
+      file: classpath:db/changelog/2-create-bus-route-table.yaml
+  - include:
+      file: classpath:db/changelog/3-create-bus-trip-table.yaml
+  - include:
+      file: classpath:db/changelog/4-create-booking-table.yaml
+  - include:
+      file: classpath:db/changelog/5-create-booking-details.yaml
+
+
+

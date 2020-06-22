@@ -1,0 +1,28 @@
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: bus-reservation
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bus_db
+    username: bus
+    password: 123456
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  liquibase: #liquibase changelog properties
+    enabled: true
+    change-log: classpath:db/db-changelog-master.yaml
+
+
+
